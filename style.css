@@ -36,7 +36,7 @@ main {
     height: 200px;
 }
 .main-info {
-    padding: 34px 30px 26px 30px;
+    padding: 34px 30px 24px 30px;
     & .heading {
         color: var(--Very-Dark-Grayish-Blue);
         word-spacing: 1px;
@@ -45,7 +45,7 @@ main {
         color: var(--Desaturated-Dark-Blue);
         font-size: 13px;
         word-spacing: 2.2px;
-        margin: 14px 0 32px;
+        margin: 14px 0 36px;
     }
 }
 .profile {
@@ -77,12 +77,15 @@ main {
     & .share {
         background-color: var(--Light-Grayish-Blue);
         border-radius: 50%;
-        width: 32px;
-        height: 32px;
+        border: none;
+        width: 28px;
+        height: 28px;
         display: flex;
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        position: relative;
+        z-index: 2;
     }
     .share:hover {
         background-color: var(--Very-Dark-Grayish-Blue);
@@ -94,23 +97,45 @@ main {
 }
 .share-menu {
     width: 330px;
-    height: 60px;
+    height: 70px;
     background-color: var(--Very-Dark-Grayish-Blue);
     position: absolute;
     left: 0;
     bottom: 0;
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding-left: 32px;
+    gap: 18px;
+    padding-left: 30px;
     z-index: 1;
-    display: none;
+    /* display: none; */
 
-    & span {
+    & .share-button-menu {
         color: white;
         letter-spacing: 5px;
         font-size: 13px;
         font-weight: 100;
+        background-color: transparent;
+        border: none;
+        width: 78px;
+        height: 42px;
+        border-radius: 10px;
+    }
+    & .share-button-menu:hover {
+        border: 1px solid white;
+        font-weight: 300;
+        cursor: pointer;
+        box-shadow: 0 0 8px 1px white;
+        transition: 0.15s;
+    }
+    & .icon-social-share {
+        border-radius: 50%;
+        overflow: visible;
+    }
+    & .icon-social-share:hover {
+        width: 24px;
+        cursor: pointer;
+        box-shadow: 0 0 8px 1px white;
+        transition: 0.1s;
     }
 }
 
