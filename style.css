@@ -94,10 +94,22 @@ main {
             filter: brightness(1000%);
         }
     }
+    .share.share-active {
+        background-color: var(--Desaturated-Dark-Blue);
+        & .share-icon {
+            filter: brightness(1000%);
+        }
+    }
+    .share.share-active:hover {
+        background-color: var(--Light-Grayish-Blue);
+        & .share-icon {
+            filter: none;
+        }
+    }
 }
 .share-menu {
     width: 330px;
-    height: 70px;
+    height: 0;
     background-color: var(--Very-Dark-Grayish-Blue);
     position: absolute;
     left: 0;
@@ -107,8 +119,10 @@ main {
     gap: 18px;
     padding-left: 30px;
     z-index: 1;
-    /* display: none; */
-
+    opacity: 0;
+    transition-property: height, opacity;
+    transition-duration: 0s, 1s;
+    
     & .share-button-menu {
         color: white;
         letter-spacing: 5px;
@@ -138,7 +152,10 @@ main {
         transition: 0.1s;
     }
 }
-
+.share-menu.menu-active {
+    height: 70px;
+    opacity: 1;
+}
 
 footer {
     font-size: 11px;
